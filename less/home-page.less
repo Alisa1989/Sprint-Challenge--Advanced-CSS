@@ -81,6 +81,26 @@
         margin-bottom: 26px;
       }
 
+      .btn {
+        text-align: center;
+        //.button();
+
+        .buttonStructure(30%, 2%, 0, 5px);
+        .buttonColors(@btn-bg-color, @btn-text-color);
+        .buttonText(1.8rem, bold);
+
+        @media @mobile{ 
+        width: 100%;
+        padding: 6% 0;
+        }
+
+        &:hover {
+          color: @btn-bg-color;
+          background:@btn-text-color;
+          border: 1px solid black;
+        }
+      }
+
     }
 
     .walk-img {

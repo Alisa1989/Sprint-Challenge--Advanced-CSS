@@ -1,24 +1,37 @@
 // Mixins Here
-.center {
+.center() {
     display: flex;
     justify-content: center;
 }
 
+//parametric mixins
+// .button() {
 
 
-// parametric mixins
-.btn {
-    background: black;
-    color: white;
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: bold;
-    width: 30%;
-    padding: 2% 0;
-    border-radius: 5px;
+//     font-size: 1.8rem;
+//     font-weight: bold;
 
-    @media @mobile{ 
-    width: 100%;
-    padding: 6% 0;
-    }
+//     width: 30%;
+//     padding: 2% 0;
+//     border-radius: 5px;
+
+//     background: black;
+//     color: white;
+
+// }
+
+.buttonStructure(@w, @p1, @p2, @r){
+    width: @w;
+    padding: @p1 @p2;
+    border-radius: @r;
+}
+
+.buttonColors(@b, @c){
+    background: @b;
+    color: @c;
+}
+
+.buttonText(@s, @w){
+    font-size: @s;
+    font-weight: @w;
 }
